@@ -31,7 +31,7 @@ pub async fn api_search(
         r#"
         SELECT id, title, url, language, last_updated, content
         FROM pages
-        WHERE LANGEUAGE = $1 AND CONTENT ILIKE $2
+        WHERE LANGUAGE = $1 AND CONTENT ILIKE $2
         "#, // SQL query to select relevant fields from the pages table.
         format!("%{}%", query) // Bind the query parameter to the SQL query.
     )
